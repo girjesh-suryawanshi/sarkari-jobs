@@ -11,10 +11,10 @@ export default function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Briefcase className="text-white text-sm" size={16} />
               </div>
-              <span className="text-xl font-bold text-neutral-700">GovtJobsNow</span>
+              <span className="text-xl font-bold text-neutral-700">SarkariJobsIndia</span>
             </div>
             <p className="text-neutral-500 mb-4 max-w-md">
-              Your trusted source for the latest government job openings with real-time updates from official sources.
+              Your trusted source for the latest Indian government job openings from ministries, railways, PSUs and banks.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-neutral-400 hover:text-neutral-600 transition-colors" data-testid="link-twitter">
@@ -52,7 +52,7 @@ export default function Footer() {
         
         <div className="border-t border-neutral-200 mt-8 pt-8 text-center">
           <p className="text-neutral-400 text-sm">
-            © 2024 GovtJobsNow. All rights reserved. Data sourced from official government websites.
+            © 2024 SarkariJobsIndia. All rights reserved. Data sourced from official Indian government websites.
           </p>
         </div>
       </div>

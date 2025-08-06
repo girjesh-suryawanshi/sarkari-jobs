@@ -29,76 +29,100 @@ export class MemStorage implements IStorage {
   private initializeMockJobs() {
     const mockJobs: InsertJob[] = [
       {
-        title: "Senior Software Developer",
-        department: "Department of Technology",
-        location: "Washington, DC",
-        qualification: "Bachelor's in Computer Science",
-        deadline: "Dec 15, 2024",
-        applyLink: "https://usajobs.gov/job/123456",
+        title: "Software Developer - Grade A",
+        department: "Ministry of Electronics and IT",
+        location: "New Delhi, India",
+        qualification: "B.Tech/BE in Computer Science + 2 years experience",
+        deadline: "Dec 15, 2025",
+        applyLink: "https://ssc.nic.in/job/dev001",
         postedOn: "2 days ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "We are seeking a highly skilled Senior Software Developer to join our team at the Department of Technology. The successful candidate will be responsible for developing and maintaining critical government software systems.",
+        sourceUrl: "https://ssc.nic.in",
+        description: "Develop and maintain government software applications for digital India initiatives. Work on e-governance projects and citizen services platforms.",
         status: "active"
       },
       {
-        title: "Public Health Analyst",
-        department: "Department of Health",
-        location: "Atlanta, GA",
-        qualification: "Master's in Public Health",
-        deadline: "Dec 10, 2024",
-        applyLink: "https://usajobs.gov/job/123457",
+        title: "Medical Officer - MBBS",
+        department: "Ministry of Health and Family Welfare",
+        location: "Mumbai, Maharashtra",
+        qualification: "MBBS degree with valid registration",
+        deadline: "Nov 10, 2025",
+        applyLink: "https://aiims.edu/job/med001",
         postedOn: "1 day ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "Join our public health team to analyze health data and support policy development for better community health outcomes.",
+        sourceUrl: "https://aiims.edu",
+        description: "Provide medical services in government hospitals. Work with healthcare teams to deliver quality medical care to citizens.",
         status: "active"
       },
       {
-        title: "Financial Analyst",
-        department: "Department of Treasury",
-        location: "New York, NY",
-        qualification: "Bachelor's in Finance/Economics",
-        deadline: "Dec 20, 2024",
-        applyLink: "https://usajobs.gov/job/123458",
+        title: "Income Tax Officer",
+        department: "Central Board of Direct Taxes",
+        location: "Bangalore, Karnataka",
+        qualification: "Bachelor's degree with 60% marks",
+        deadline: "Oct 25, 2025",
+        applyLink: "https://incometax.gov.in/job/tax001",
         postedOn: "3 days ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "Analyze financial data and support budget planning and fiscal policy decisions for the Department of Treasury.",
+        sourceUrl: "https://incometax.gov.in",
+        description: "Handle income tax assessments and investigations. Ensure compliance with tax laws and regulations.",
         status: "active"
       },
       {
-        title: "Cybersecurity Specialist",
-        department: "Department of Homeland Security",
-        location: "Washington, DC",
-        qualification: "Bachelor's in Computer Science + Security Clearance",
-        deadline: "Jan 5, 2025",
-        applyLink: "https://usajobs.gov/job/123459",
+        title: "Cyber Security Analyst",
+        department: "Ministry of Home Affairs",
+        location: "Hyderabad, Telangana",
+        qualification: "B.Tech in IT/CSE + Cyber Security certification",
+        deadline: "Sep 15, 2025",
+        applyLink: "https://mha.gov.in/job/cyber001",
         postedOn: "1 day ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "Protect critical infrastructure and secure government systems from cyber threats.",
+        sourceUrl: "https://mha.gov.in",
+        description: "Monitor and protect government digital infrastructure from cyber threats. Implement security protocols and incident response.",
         status: "active"
       },
       {
-        title: "Education Policy Specialist",
-        department: "Department of Education",
-        location: "Chicago, IL",
-        qualification: "Master's in Education or Public Policy",
-        deadline: "Dec 18, 2024",
-        applyLink: "https://usajobs.gov/job/123460",
+        title: "Education Officer",
+        department: "Ministry of Education",
+        location: "Chennai, Tamil Nadu",
+        qualification: "Master's in Education + B.Ed degree",
+        deadline: "Sep 30, 2025",
+        applyLink: "https://education.gov.in/job/edu001",
         postedOn: "4 days ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "Develop and implement education policies to improve learning outcomes nationwide.",
+        sourceUrl: "https://education.gov.in",
+        description: "Develop and implement education policies. Oversee government school programs and teacher training initiatives.",
         status: "active"
       },
       {
-        title: "Environmental Engineer",
-        department: "Environmental Protection Agency",
-        location: "Denver, CO",
-        qualification: "Bachelor's in Environmental Engineering",
-        deadline: "Dec 8, 2024",
-        applyLink: "https://usajobs.gov/job/123461",
+        title: "Railway Traffic Inspector",
+        department: "Indian Railways",
+        location: "Kolkata, West Bengal",
+        qualification: "12th pass + Railway training certification",
+        deadline: "Oct 20, 2025",
+        applyLink: "https://indianrailways.gov.in/job/rail001",
+        postedOn: "5 days ago",
+        sourceUrl: "https://indianrailways.gov.in",
+        description: "Ensure safe railway operations and traffic management. Monitor train schedules and coordinate with station masters.",
+        status: "active"
+      },
+      {
+        title: "Forest Officer - IFS",
+        department: "Ministry of Environment and Forests",
+        location: "Dehradun, Uttarakhand",
+        qualification: "Bachelor's degree + UPSC Civil Services qualification",
+        deadline: "Nov 15, 2025",
+        applyLink: "https://moef.gov.in/job/forest001",
         postedOn: "1 week ago",
-        sourceUrl: "https://usajobs.gov",
-        description: "Design and implement environmental protection measures and ensure compliance with regulations.",
-        status: "closing_soon"
+        sourceUrl: "https://moef.gov.in",
+        description: "Protect and conserve forest resources. Implement environmental policies and wildlife conservation programs.",
+        status: "active"
+      },
+      {
+        title: "Bank Probationary Officer",
+        department: "State Bank of India",
+        location: "Pune, Maharashtra",
+        qualification: "Graduate degree in any discipline",
+        deadline: "Oct 18, 2025",
+        applyLink: "https://sbi.co.in/job/po001",
+        postedOn: "6 days ago",
+        sourceUrl: "https://sbi.co.in",
+        description: "Handle banking operations and customer service. Manage loan processing and financial transactions in government bank.",
+        status: "active"
       }
     ];
 
@@ -127,7 +151,23 @@ export class MemStorage implements IStorage {
 
   // Job methods
   async getAllJobs(): Promise<Job[]> {
-    return Array.from(this.jobs.values());
+    const jobs = Array.from(this.jobs.values());
+    return this.filterActiveJobs(jobs);
+  }
+
+  private filterActiveJobs(jobs: Job[]): Job[] {
+    const currentDate = new Date();
+    return jobs.filter(job => {
+      try {
+        const deadlineDate = new Date(job.deadline);
+        if (isNaN(deadlineDate.getTime())) {
+          return true; // Include the job if we can't parse the date
+        }
+        return deadlineDate >= currentDate;
+      } catch (error) {
+        return true; // Include the job if there's an error
+      }
+    });
   }
 
   async getJobById(id: string): Promise<Job | undefined> {
@@ -162,6 +202,9 @@ export class MemStorage implements IStorage {
 
   async searchJobs(query: string, filters?: { location?: string; department?: string; deadline?: string }): Promise<Job[]> {
     let jobs = Array.from(this.jobs.values());
+    
+    // First filter out expired jobs
+    jobs = this.filterActiveJobs(jobs);
 
     // Filter by search query
     if (query) {

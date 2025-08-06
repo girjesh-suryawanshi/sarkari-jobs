@@ -62,7 +62,7 @@ export default function Home() {
         {/* Results Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h2 className="text-2xl font-semibold text-neutral-700">Latest Job Openings</h2>
+            <h2 className="text-2xl font-semibold text-neutral-700">Latest Sarkari Job Openings</h2>
             <p className="text-neutral-500 mt-1" data-testid="text-results-count">
               {isLoading ? "Loading..." : `Showing ${sortedJobs.length} jobs`}
             </p>

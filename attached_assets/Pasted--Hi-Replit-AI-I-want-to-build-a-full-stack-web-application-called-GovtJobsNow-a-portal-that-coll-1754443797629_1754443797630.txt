@@ -1,0 +1,106 @@
+👋 Hi Replit AI! I want to build a full-stack web application called GovtJobsNow, a portal that collects and displays latest government job openings automatically from official websites.
+
+This tool is meant for users (students, job seekers) who are looking for trustworthy, real-time updates on government jobs in their country. It should have a clean frontend, smart backend, and scraping logic.
+
+🧱 PROJECT STRUCTURE
+Please generate the following folder structure inside my Replit project:
+
+pgsql
+Copy
+Edit
+govtjobsnow/
+├── backend/
+│   ├── app.py (or index.js)
+│   ├── routes/
+│   ├── db/
+│   └── scraper/
+├── frontend/
+│   └── React App (with Tailwind CSS)
+├── public/
+│   └── assets (e.g., logos/icons)
+├── .replit
+├── replit.nix
+⚙️ TECH STACK
+Use these tools unless otherwise needed:
+
+Layer	Tech
+Frontend	React + Tailwind CSS
+Backend	Python Flask (or Node.js with Express, your choice)
+Scraping	Python + BeautifulSoup
+Database	Replit DB (or use Supabase/Firebase if necessary)
+Hosting	Replit native hosting
+Notification (Optional)	Email via SendGrid (MVP: just console.log)
+
+📦 FUNCTIONALITY
+🔹 1. Scraper (Python)
+Create a scraper that fetches the latest job posts from a mock/simulated government job site (use dummy HTML if needed).
+
+Each job post should include:
+
+job_title
+
+department
+
+location
+
+qualification
+
+deadline
+
+apply_link
+
+posted_on
+
+source_url
+
+Store this data in Replit DB or a JSON file for the MVP.
+
+🔹 2. Backend (Flask or Express)
+Build REST API endpoints:
+
+GET /jobs → returns all jobs
+
+GET /jobs?search=xyz → filter jobs by title/department/location
+
+POST /jobs → (admin only) add a job manually
+
+GET /jobs/:id → single job details
+
+Backend should serve data to the frontend and scrape jobs once daily (or on demand with a button/API call).
+
+🔹 3. Frontend (React + Tailwind)
+Create a responsive, modern UI with:
+
+Job listing page (card layout)
+
+Search bar and filters (location, department, date)
+
+Job detail page (on click)
+
+“Apply Now” button that links to the job's source
+
+Footer with about/contact links
+
+Optional:
+
+Save job to local storage
+
+"Share" button (copy link)
+
+🛠️ MVP TASK LIST
+You can follow this development order:
+
+✅ Setup project structure (folders + entry points)
+
+✅ Build scraper module (scrapes jobs, stores in DB)
+
+✅ Build backend API to serve job data
+
+✅ Create React frontend with API integration
+
+✅ Connect scraper → backend → frontend
+
+✅ Style with Tailwind CSS
+
+✅ Deploy and test on Replit URL
+

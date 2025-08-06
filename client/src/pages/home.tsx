@@ -19,10 +19,22 @@ export default function Home() {
   });
   const [sortBy, setSortBy] = useState("latest");
 
+  // Build query parameters
+  const queryParams = new URLSearchParams();
+  if (searchQuery) queryParams.set('search', searchQuery);
+  if (filters.location !== 'all') queryParams.set('location', filters.location);
+  if (filters.department !== 'all') queryParams.set('department', filters.department);
+  if (filters.deadline !== 'all') queryParams.set('deadline', filters.deadline);
+  
+  const queryString = queryParams.toString();
+  const apiUrl = `/api/jobs${queryString ? '?' + queryString : ''}`;
+
   const { data: jobs, isLoading, error } = useQuery<Job[]>({
-    queryKey: ["/api/jobs", searchQuery, filters.location, filters.department, filters.deadline],
+    queryKey: [apiUrl],
     enabled: true,
   });
+
+
 
   const handleSearch = (query: string, newFilters: SearchFilters) => {
     setSearchQuery(query);
